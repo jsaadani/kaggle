@@ -1,0 +1,1 @@
+randInitializeWeights <- function(L_in,L_out){    epsilon_init=0.12  W <- matrix(runif((1+L_in)*L_out),(1+L_in),L_out)  W <- W*2*epsilon_init-epsilon_init#between -epsilon_init and +epsilon_init    return(W)  }

@@ -1,0 +1,1 @@
+normVal <- function(X,mu,sigma){    n=ncol(X)  X_norm=matrix(0,nrow(X),ncol(X))# mu=sapply(X,mean,na.rm=TRUE)#   sigma=sapply(X,sd,na.rm=TRUE)    for (i in 1:n){    X_norm[,i]=(X[,i]-mu[i])/sigma[i]  }  return(X_norm)  }

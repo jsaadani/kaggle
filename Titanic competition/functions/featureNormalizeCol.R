@@ -1,0 +1,1 @@
+featureNormalizeCol <- function(col){  mu=mean(col, na.rm=TRUE)sigma=sd(col,na.rm=TRUE)col_norm=(col-mu)/sigmareturn(col_norm)  }

@@ -1,0 +1,1 @@
+randInitializeWeights <- function(L_in,L_out){    #epsilon_init=sqrt(6)/sqrt(L_in+L_out)  epsilon_init=sqrt(6/(L_in+L_out))  set.seed(1)  W <- matrix(runif((1+L_in)*L_out),ncol=(1+L_in),nrow=L_out)  W <- W*2*epsilon_init-epsilon_init#between -epsilon_init and +epsilon_init    return(W)  }

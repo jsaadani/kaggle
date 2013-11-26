@@ -1,0 +1,1 @@
+linearRegCostFunction <- function(theta,X,y,lambda){    #initialize some useful values  m=nrow(X)    #test  #theta=initial_theta    #cost function  predictions=X%*%theta  theta_reg=theta[2:length(theta)]  J=(1/(2*m))*sum((predictions-y)^2)  reg_cost=(lambda/(2*m))*sum(theta_reg^2)  J=J+reg_cost      return(J)  }

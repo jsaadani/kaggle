@@ -1,0 +1,1 @@
+trainLinearReg <- function(X,y,lambda){    #====learn theta====  initial_theta <- matrix(0,ncol(X),1)  result <- optim(par=initial_theta,fn=linearRegCostFunction,gr=linearRegGradFunction,X=X,y=y,lambda=lambda,                  method="BFGS")  theta <- result$par  cost <- result$value    trainLinearReg <- list("theta"=theta,"cost"=cost)    return(trainLinearReg)  }

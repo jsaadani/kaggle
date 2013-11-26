@@ -1,0 +1,1 @@
+gradFunctionReg <- function(theta,X,y,lambda){    #initialize some useful values  m=nrow(X)  #value to return  grad <- vector(length=length(theta))    #cost function  predictions=sigmoid(X %*% theta)    grad[1]=(1/m)*sum((predictions-y)*X[,1])    for(j in 2:ncol(X)){    grad[j] <- (1/m)*sum((predictions-y)*X[,j])+lambda*theta[j]/m  }    return(grad)}

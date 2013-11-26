@@ -1,0 +1,1 @@
+polyFeatures <- function(X,p){    m <- nrow(data.frame(X))  n <- ncol(data.frame(X))  X_poly <- matrix(0,m,n*p)    for(i in 1:m){    for(k in 1:n){      for(j in 1:p){        X_poly[i,(j+(k-1)*p)] <- X[i,k]^j      }    }  }  return (X_poly)}
